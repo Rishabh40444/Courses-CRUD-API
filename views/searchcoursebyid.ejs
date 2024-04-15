@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="navbar.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <title>Search a Course</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1{
+
+            text-align: center;
+        }
+        
+
+        div{
+            background-color: blue;
+            color: black;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li{
+            float: left;
+        }
+
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active){
+            background-color: #111;
+        }
+        .active{
+            background-color:red;
+        }
+       
+    </style>
+
+   
+
+   
+
+
+</head>
+
+<body>
+    <ul class="navbar">
+        <li class="active"><a href="./index">Home</a></li>
+        <li><a href="./listallcourses">View All Courses</a></li>
+        <li><a href="./searchcoursebyid">Search a Course</a></li>
+        <li><a href="./deletecourse">Remove a Course </a></li>
+        <li><a href="./updatecourse">Change a Course's Information</a></li>
+     </ul>
+  
+     <div>
+        <h1>Welcome to CodeMasters API</h1>
+        <br>
+        <p>Search your Desired course here</p>
+  
+     </div>
+    
+
+    
+    <br/><br/>
+    <ul>
+        <ul>
+            <% courses.forEach(course => { %>
+              <li><%= course.name %></li>
+            <% }) %>
+          </ul>
+          
+    </ul>
+    
+    
+</body>
+</html>
